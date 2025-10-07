@@ -1,11 +1,9 @@
 # Adresa vašeho nasazeného webu
 backend:
-  name: github
-  repo: jgrimdev/muj-blog # <-- DOPLŇTE SVÉ ÚDAJE
-  branch: main # Nebo 'master', podle vaší hlavní větve
+  name: git-gateway # Změna z 'github' na 'git-gateway'
 
 # Adresa, kde bude Vercel ověřovat uživatele
-site_url: https://muj-blog.vercel.app/ # <-- DOPLŇTE VAŠI VERCEL ADRESU
+site_url: https://muj-blog.netlify.app/ # <-- DOPLŇTE VAŠI VERCEL ADRESU
 
 # Nastavení nahrávání obrázků
 media_folder: "src/assets/images/blog" # Kam se mají obrázky ukládat
