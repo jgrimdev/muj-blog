@@ -1,22 +1,18 @@
-# Adresa vašeho nasazeného webu
 backend:
-  name: git-gateway # Změna z 'github' na 'git-gateway'
+  name: git-gateway # Pro Netlify MUSÍ být 'git-gateway'
 
-# Adresa, kde bude Vercel ověřovat uživatele
-site_url: https://muj-blog.netlify.app/ # <-- DOPLŇTE VAŠI VERCEL ADRESU
+# Doporučené nastavení pro nahrávání obrázků
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
-# Nastavení nahrávání obrázků
-media_folder: "src/assets/images/blog" # Kam se mají obrázky ukládat
-public_folder: "/src/assets/images/blog" # Jak na ně odkazovat
-
-# Definice kolekcí obsahu
+# Definice kolekcí (tato část je v pořádku a může zůstat)
 collections:
-  - name: "blog" # Identifikátor kolekce
-    label: "Příspěvky" # Jméno v administraci
-    folder: "src/content/blog" # Složka s Markdown soubory
-    create: true # Povolit vytváření nových příspěvků
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Formát názvu souboru
-    fields: # Políčka pro každý příspěvek
+  - name: "blog"
+    label: "Příspěvky"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Nadpis", name: "title", widget: "string" }
       - { label: "Datum publikace", name: "pubDate", widget: "datetime" }
       - { label: "Krátký popisek", name: "description", widget: "text" }
